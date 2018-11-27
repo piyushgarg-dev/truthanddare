@@ -1,7 +1,8 @@
-
+var truth = new Array();
+var dare=new Array();
 function choice_truth()
 {
-    let truth = new Array();
+    
     
     truth.push("What was the last thing you searched for on your phone?");
     truth.push("True or false? You have a crush on [fill in the blank]");
@@ -20,7 +21,7 @@ function choice_truth()
 
 function choice_dare()
 {
-    let dare=new Array();
+    
     
     dare.push("Let someone put lipstick on your lips.");
     dare.push("Eat something and then talk with your mouth full");
@@ -36,4 +37,41 @@ function choice_dare()
     let randdare=(Math.floor(Math.random()*dare.length));
     alert(dare[randdare]);
     
+}
+
+function adddare()
+{
+    var nodebutton=document.getElementById('newbutton');
+    var node=document.getElementById('inputid');
+    node.style.visibility='visible';
+    nodebutton.style.visibility='visible';
+    
+    
+}
+
+function addtruth()
+{
+    var nodebutton=document.getElementById('newbutton1');
+    var node=document.getElementById('inputid');
+    node.style.visibility='visible';
+    nodebutton.style.visibility='visible';
+}
+
+function addnewdares()
+{
+    var bb=document.getElementById('newbutton1');
+    var node=document.getElementById('inputid');
+    var newdare=node.value;
+    dare.push(newdare);
+    node.value="";
+    
+}
+function addnewtruths()
+{
+    var bb=document.getElementById('newbutton1');
+    var node1=document.getElementById('inputid');
+    var newtruth=node1.value;
+    truth.push(newtruth);
+    node.value="";
+    alert("donne")
 }
